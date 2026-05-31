@@ -1,6 +1,7 @@
 import AboutMe from '@/components/aboutMe'
 import CoreSkills from '@/components/coreSkills'
 import Education from '@/components/education'
+import Languages from '@/components/languages'
 import MyHeader from '@/components/myHeader'
 import SectionTitle from '@/components/sectionTitle'
 import WorkingExperience from '@/components/workingExperience'
@@ -30,6 +31,11 @@ export default function Home() {
           <section>
             <SectionTitle>Education</SectionTitle>
             <Education />
+          </section>
+
+          <section>
+            <SectionTitle>Languages</SectionTitle>
+            <Languages />
           </section>
         </div>
       </div>
