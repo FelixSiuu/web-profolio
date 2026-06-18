@@ -14,7 +14,7 @@ export default async function WorkingExperience() {
       {data.map((item, index) => {
         return (
           <article key={index}>
-            <div className="grid grid-cols-[repeat(2,auto)] not-last:mb-6 gap-4 py-6">
+            <div className="grid grid-cols-[auto_1fr] not-last:mb-6 gap-4 py-6">
               <h3 className="font-semibold text-xl">{item.jobTitle}</h3>
 
               <div className="text-[14px] md:whitespace-nowrap text-right">

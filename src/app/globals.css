@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -126,5 +126,26 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@media print {
+  html {
+    font-size: 12px !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 強制設定 A4 紙張大小與邊距 */
+  @page {
+    size: A4 portrait;
+    margin: 5mm;
+    scale: 2;
+  }
+
+  * {
+    white-space: wrap !important;
   }
 }

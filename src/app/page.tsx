@@ -13,10 +13,10 @@ export default function Home() {
         <MyHeader />
 
         <div className="flex flex-col gap-10">
-          <section>
+          {/* <section>
             <SectionTitle>About Me</SectionTitle>
             <AboutMe />
-          </section>
+          </section> */}
 
           <section>
             <SectionTitle>Core Skills</SectionTitle>
