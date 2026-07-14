@@ -11,7 +11,7 @@ declare module "axios" {
   }
 }
 const api = axios.create({
-  baseURL: `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1`,
+  baseURL: `https://api.felixsiu.lol/api/v1`,
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
