@@ -1,6 +1,6 @@
 'use client'
 
-import { Download, Printer } from 'lucide-react'
+import { Printer } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import { contactService } from '@/services/myInfo.service'

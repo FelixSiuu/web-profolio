@@ -1,0 +1,35 @@
+:root {
+  --portfolio-bg: #f4f2ee;
+  --portfolio-ink-strong: #18181b;
+  --portfolio-ink: #3f3f46;
+  --portfolio-ink-soft: #71717a;
+  --portfolio-surface: #ffffff;
+  --portfolio-surface-muted: #fafaf9;
+  --portfolio-border: #e4e4e7;
+  --portfolio-brand: #111827;
+  --portfolio-brand-strong: #030712;
+  --portfolio-brand-contrast: #f9fafb;
+  --portfolio-accent-warm: rgba(245, 228, 205, 0.55);
+  --portfolio-accent-cool: rgba(220, 233, 245, 0.5);
+  --portfolio-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --portfolio-shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --portfolio-radius-lg: 20px;
+  --portfolio-radius-xl: 24px;
+}
+
+.portfolio-page-bg {
+  background: radial-gradient(circle at 0% 0%, var(--portfolio-accent-warm), transparent 42%), radial-gradient(circle at 100% 0%, var(--portfolio-accent-cool), transparent 40%), var(--portfolio-bg);
+}
+
+.portfolio-surface {
+  background-color: var(--portfolio-surface);
+  border: 1px solid color-mix(in oklab, var(--portfolio-border) 90%, white 10%);
+  box-shadow: var(--portfolio-shadow-sm);
+  border-radius: var(--portfolio-radius-xl);
+}
+
+.portfolio-card {
+  background-color: var(--portfolio-surface);
+  border: 1px solid color-mix(in oklab, var(--portfolio-border) 88%, white 12%);
+  border-radius: var(--portfolio-radius-lg);
+}
