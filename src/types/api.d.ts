@@ -34,13 +34,13 @@ declare interface CoreSkill {
 
 declare interface KeyResponsibility {
   id: number
+  workingId: number
   title: string | null
   responsibility: string
 }
 
 declare interface WorkingExperience {
   id: number
-  workingId: number
   startDate: string
   endDate: string | null
   jobTitle: string
@@ -59,4 +59,27 @@ declare interface Education {
   degree: string | null
   major: string
   location: string
+}
+
+declare type SocialLinkPlatform = 'github' | 'linkedin'
+
+declare interface SocialLinks {
+  github?: string
+  linkedin?: string
+}
+
+declare interface PublicMap {
+  [key: string]: boolean
+}
+
+declare interface Contact {
+  displayName: string | null
+  title: string | null
+  email: string
+  phone: string | null
+  address: string | null
+  socialLinks: SocialLinks | null
+  publicMap: PublicMap | null
+  createTime: string | null
+  updateTime: string | null
 }
