@@ -29,3 +29,17 @@ export const educationService = {
     return api.get(url)
   }
 }
+
+// export const contactService = {
+//   getContact: async (): Promise<BaseVo<Contact>> => {
+//     const url = `${username}/contact`
+//     return api.get(url)
+//   }
+// }
+
+// export const avatarService = {
+//   getAvatar: async (): Promise<Blob> => {
+//     const url = `${username}/avatar`
+//     return api.get(url, { responseType: 'blob' })
+//   }
+// }

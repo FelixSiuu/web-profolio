@@ -4,6 +4,7 @@ import type { InternalAxiosRequestConfig, AxiosResponse } from 'axios'
 
 declare module 'axios' {
   export interface AxiosInstance {
+    get(url: string, config: AxiosRequestConfig & { responseType: 'blob' }): Promise<Blob>
     get<T = any>(url: string, config?: AxiosRequestConfig): Promise<BaseVo<T>>
     post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<BaseVo<T>>
     put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<BaseVo<T>>
