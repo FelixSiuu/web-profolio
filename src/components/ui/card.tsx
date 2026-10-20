@@ -32,7 +32,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<'div'>) {
 }
 
 function CardTitle({ className, ...props }: React.ComponentProps<'div'>) {
-  return <div data-slot="card-title" className={cn('cn-font-heading text-base leading-snug font-bold group-data-[size=sm]/card:text-sm', className)} {...props} />
+  return <div data-slot="card-title" className={cn('cn-font-heading text-base leading-snug font-bold group-data-[size=sm]/card:text-sm text-2xl', className)} {...props} />
 }
 
 function CardDescription({ className, ...props }: React.ComponentProps<'div'>) {

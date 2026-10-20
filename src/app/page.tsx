@@ -1,4 +1,3 @@
-import AboutMe from '@/components/aboutMe'
 import CoreSkills from '@/components/coreSkills'
 import Education from '@/components/education'
 import Languages from '@/components/languages'
@@ -13,11 +12,6 @@ export default function Home() {
         <MyHeader />
 
         <div className="flex flex-col gap-10">
-          {/* <section>
-            <SectionTitle>About Me</SectionTitle>
-            <AboutMe />
-          </section> */}
-
           <section>
             <SectionTitle>Core Skills</SectionTitle>
             <CoreSkills />
