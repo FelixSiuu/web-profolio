@@ -1,11 +1,11 @@
 import AboutMe from '@/components/aboutMe'
 import ContactCta from '@/components/contactCta'
-import ExperienceSnapshot from '@/components/experienceSnapshot'
-import FeaturedProjects from '@/components/featuredProjects'
 import MyHeader from '@/components/myHeader'
 import SectionTitle from '@/components/sectionTitle'
-import SkillMatrix from '@/components/skillMatrix'
 import WorkingStyle from '@/components/workingStyle'
+import ExperienceSnapshotSection from '@/features/experience/sections/experience-snapshot.section'
+import FeaturedProjectsSection from '@/features/projects/sections/featured-projects.section'
+import SkillMatrixSection from '@/features/skills/sections/skill-matrix.section'
 
 export default function HomeV2Page() {
   return (
@@ -34,18 +34,18 @@ export default function HomeV2Page() {
 
         <section id="featured-projects" className="space-y-4">
           <SectionTitle>Featured Projects</SectionTitle>
-          <FeaturedProjects />
+          <FeaturedProjectsSection />
         </section>
 
         <section className="space-y-4">
           <SectionTitle>Experience Snapshot</SectionTitle>
-          <ExperienceSnapshot />
+          <ExperienceSnapshotSection />
         </section>
 
         <section className="grid gap-8 lg:grid-cols-[1fr_1fr]">
           <div className="space-y-4">
             <SectionTitle>Skill Matrix</SectionTitle>
-            <SkillMatrix />
+            <SkillMatrixSection />
           </div>
 
           <div className="space-y-8">
