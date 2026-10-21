@@ -1,7 +1,9 @@
-import type { ProjectCase } from '@/features/projects/domain/project.types'
+import type { ProjectListItem } from '@/features/projects/domain/project.types'
+import { getProjectPath } from '@/features/projects/content/projects.content'
+import Link from 'next/link'
 
 type ProjectCardProps = {
-  project: ProjectCase
+  project: ProjectListItem
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
@@ -18,9 +20,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </li>
         ))}
       </ul>
-      <a href={project.href} className="mt-5 inline-block text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4">
+      <Link href={getProjectPath(project.slug)} className="mt-5 inline-block text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4">
         View details
-      </a>
+      </Link>
     </article>
   )
 }

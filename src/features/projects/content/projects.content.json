@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "resume-builder-platform",
+    "name": "Resume Builder Platform",
+    "value": "Reduced resume customization time by turning repeated edits into reusable templates.",
+    "summary": "A print-first resume website with API-driven content sections and controlled A4 export behavior.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "isFeatured": true,
+    "role": "Frontend Engineer",
+    "duration": "6 weeks",
+    "challenge": "The team needed a reusable resume delivery format that stayed readable both online and in printed PDF without repetitive manual edits.",
+    "solution": "Built a structured section model with API-driven content, print-aware layout constraints, and section-level formatting controls.",
+    "impact": "Reduced resume update overhead and made each tailored version faster to generate.",
+    "liveUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "slug": "admin-workflow-dashboard",
+    "name": "Admin Workflow Dashboard",
+    "value": "Improved operator visibility by consolidating task queues and status into one timeline view.",
+    "summary": "Dashboard experience with role-based workflows, reusable widgets, and clearer task lifecycle tracking.",
+    "stack": ["React", "TypeScript", "REST API"],
+    "isFeatured": true,
+    "role": "Frontend Developer",
+    "duration": "3 months",
+    "challenge": "Operators had to switch across multiple pages to understand task states and next actions, causing delays and context loss.",
+    "solution": "Designed a unified dashboard with grouped statuses, timeline visualization, and reusable widgets connected to role-specific permissions.",
+    "impact": "Improved operational clarity and shortened the time needed to complete routine workflows.",
+    "liveUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "slug": "brand-website-revamp",
+    "name": "Brand Website Revamp",
+    "value": "Boosted loading performance with static generation and smarter content rendering.",
+    "summary": "Marketing site architecture focused on SEO structure, content maintainability, and delivery speed.",
+    "stack": ["Next.js", "SEO", "Performance"],
+    "isFeatured": true,
+    "role": "Frontend Engineer",
+    "duration": "2 months",
+    "challenge": "The previous site had weak performance and inconsistent page structure, hurting discoverability and editorial speed.",
+    "solution": "Rebuilt the marketing stack with static generation, improved semantic structure, and maintainable content blocks.",
+    "impact": "Delivered faster pages and a cleaner publishing workflow for ongoing content updates.",
+    "liveUrl": "#",
+    "repoUrl": "#"
+  }
+]
