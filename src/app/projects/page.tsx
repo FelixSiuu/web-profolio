@@ -7,8 +7,8 @@ export const metadata = {
   description: 'Selected frontend project case studies and implementation outcomes.'
 }
 
-export default function ProjectsPage() {
-  const projects = projectsContent.getAllList()
+export default async function ProjectsPage() {
+  const projects = await projectsContent.getAllList()
 
   return (
     <main className="portfolio-page-bg min-h-full px-4 py-12 md:py-16">

@@ -1,7 +1,9 @@
 import { contactService } from '@/services/myInfo.service'
 
 export default async function ContactCta() {
-  const response = await contactService.getContact()
+  const response = await contactService.getContact().catch(() => null)
+
+  if (!response) return null
 
   if (!response.isSuccess) return null
 

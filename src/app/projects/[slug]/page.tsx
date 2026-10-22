@@ -1,5 +1,6 @@
 import { getProjectPath, projectsContent } from '@/features/projects/content/projects.content'
 import type { Metadata } from 'next'
+import { cache } from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -7,13 +8,18 @@ type ProjectDetailPageProps = {
   params: Promise<{ slug: string }>
 }
 
+const getProjectBySlug = cache(async (slug: string) => {
+  return projectsContent.getDetailBySlug(slug)
+})
+
 export async function generateStaticParams() {
-  return projectsContent.getAllList().map((project) => ({ slug: project.slug }))
+  const projects = await projectsContent.getAllList()
+  return projects.map((project) => ({ slug: project.slug }))
 }
 
 export async function generateMetadata({ params }: ProjectDetailPageProps): Promise<Metadata> {
   const { slug } = await params
-  const project = projectsContent.getDetailBySlug(slug)
+  const project = await getProjectBySlug(slug)
 
   if (!project) {
     return {
@@ -29,7 +35,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const { slug } = await params
-  const project = projectsContent.getDetailBySlug(slug)
+  const project = await getProjectBySlug(slug)
 
   if (!project) notFound()
 
@@ -102,8 +108,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <section className="pb-4">
           <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">Related Cases</h2>
           <div className="mt-3 flex flex-wrap gap-2">
-            {projectsContent
-              .getFeaturedList()
+            {(await projectsContent.getFeaturedList())
               .filter((item) => item.slug !== project.slug)
               .slice(0, 2)
               .map((item) => (

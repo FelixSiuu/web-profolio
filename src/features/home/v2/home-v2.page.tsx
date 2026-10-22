@@ -1,4 +1,3 @@
-import AboutMe from '@/components/aboutMe'
 import ContactCta from '@/components/contactCta'
 import MyHeader from '@/components/myHeader'
 import SectionTitle from '@/components/sectionTitle'
@@ -48,14 +47,7 @@ export default function HomeV2Page() {
             <SkillMatrixSection />
           </div>
 
-          <div className="space-y-8">
-            <section className="space-y-4">
-              <SectionTitle>About</SectionTitle>
-              <div className="portfolio-card p-5 text-sm leading-7 text-[var(--portfolio-ink)]">
-                <AboutMe />
-              </div>
-            </section>
-
+          <div className="space-y-4">
             <section className="space-y-4">
               <SectionTitle>Working Style</SectionTitle>
               <WorkingStyle />
