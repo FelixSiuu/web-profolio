@@ -20,18 +20,14 @@ export type ProjectDetail = ProjectListItem & {
   repoUrl?: string | null
 }
 
-export type ProjectStackResponse = {
-  stackName: string
-  sortOrder: number
-}
-
 export type ProjectListResponse = {
   slug: string
   sortOrder: number
   name: string
   value: string
   summary: string
-  stacks: ProjectStackResponse[]
+  // Backend returns stack names as a pre-sorted string list.
+  stacks: string[]
   featured: boolean
   createTime?: string
   updateTime?: string

@@ -3,12 +3,6 @@ import { projectsService } from '@/services/myInfo.service'
 
 export const getProjectPath = (slug: string): string => `/projects/${slug}`
 
-const toStackNames = (stacks?: { stackName: string; sortOrder: number }[] | null): string[] => {
-  if (!stacks) return []
-
-  return [...stacks].sort((a, b) => a.sortOrder - b.sortOrder).map((item) => item.stackName)
-}
-
 const toListItem = (project: ProjectListResponse): ProjectListItem => {
   const { slug, sortOrder, name, value, summary, featured, createTime, updateTime } = project
   return {
@@ -17,7 +11,7 @@ const toListItem = (project: ProjectListResponse): ProjectListItem => {
     name,
     value,
     summary,
-    stack: toStackNames(project.stacks),
+    stack: project.stacks ?? [],
     isFeatured: featured,
     createTime,
     updateTime
